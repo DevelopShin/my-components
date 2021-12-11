@@ -23,7 +23,7 @@ function MainComment() {
         <SignleComment data OnReplyHandler={OnReplyHandler}/>
 
         {OnReply && <WriteContainer style = {{marginLeft:"48px"}}>
-          <TextArea rows={4} cols={20}/>
+          <TextArea rows={4} cols={20} />
           <Button >Submit</Button>
         </WriteContainer >
         }
