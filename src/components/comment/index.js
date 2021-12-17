@@ -1,9 +1,8 @@
 import SignleComment from "./SingleComment";
-import { TextArea, Button, WriteContainer } from "./CommentElements";
+import { TextArea, Button, WriteContainer,Replaycontainer } from "./CommentElements";
 import { Wrapper, CommentBoard } from "./UseExElements";
 import React, { useState } from 'react'
-// import ReplyBoard from "./ReplyBoard";
-// import { Replaycontainer } from "./CommentElements";
+import ReplyBoard from "./ReplyBoard";
 import react from "react";
 
 function MainComment() {
@@ -18,30 +17,35 @@ function MainComment() {
     e.preventDefault()
     setcommentList([...commentList, comment])
     setcomment('')
+    console.log(commentList.length)
+
   }
 
   return (
     <Wrapper id='contaniner'>
       <CommentBoard id='board'>
+        <div style={{ marginBottom: "10px", paddingBottom: "10px", borderBottom: "solid 2px rgba(0,0,0,0.06" }}>
+          <WriteContainer>
+            <TextArea rows={6} name="textarea" value={comment} onChange={onChangeComment} />
+            <Button onClick={onSubmitComment}>Submit</Button>
+          </WriteContainer>
+        </div>
 
-        <WriteContainer>
-          <TextArea rows={6} name="textarea" value={comment} onChange={onChangeComment} />
-          <Button onClick={onSubmitComment}>Submit</Button>
-        </WriteContainer>
-        <p>{comment}</p>
-        <br />
-        <hr />
-        <WriteContainer>
+
+        <>
           {commentList && commentList.map((newcomment, index) => (
             <React.Fragment key={index} >
-              {console.log(commentList.length)}
               <SignleComment
                 comment={newcomment}
               />
 
+              <ReplyBoard comment={commentList} > 
+
+              </ReplyBoard>
+
             </React.Fragment>
           ))}
-        </WriteContainer>
+        </>
 
       </CommentBoard>
     </Wrapper>

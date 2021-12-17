@@ -1,9 +1,7 @@
 import CommentForm from "./CommentForm";
 import { TextArea, Button, WriteContainer } from "./CommentElements";
-import { Wrapper, CommentBoard } from "./UseExElements";
 import React, { useState } from 'react'
-import ReplyBoard from "./ReplyBoard";
-import { Replaycontainer } from "./CommentElements";
+
 import react from "react";
 function SignleComment(props) {
 
@@ -18,6 +16,7 @@ function SignleComment(props) {
     setReplycomment(e.target.value)
   }
   const onSubmitReplyComment = (e) => {
+    console.log(Replycomment)
     e.preventDefault()
     setReplycommentList([...ReplycommentList, Replycomment])
     setReplycomment('')
@@ -25,20 +24,20 @@ function SignleComment(props) {
 
   return (
  
-      // <CommentBoard id='board'>
-      <div>
-            <CommentForm OnReplyHandler={OnReplyHandler} 
+      <>
+            <CommentForm 
+              OnReplyHandler={OnReplyHandler} 
               comment={props.comment}
             />
 
         {/* Reply comments */}
             {OnReply &&
-                <WriteContainer >
+                <WriteContainer style = {{marginLeft: '20px'}}>
                   <TextArea rows={3} name="Replycomment" value={Replycomment} onChange={onChangeReplyComment} />
                   <Button type="htmlSubmit" onClick={onSubmitReplyComment}>Submit</Button>
                 </WriteContainer >
             } 
-          </div>
+      </>
 
   )
 }

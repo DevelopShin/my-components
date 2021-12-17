@@ -14,7 +14,7 @@ export const Avatar = styled.img`
     margin-right: 10px;
     width:35px;
     height:35px;
-    border-radius:15%;
+    border-radius:75%;
 `
 
 export const CommentContent = styled.div`
@@ -25,14 +25,15 @@ export const CommentContent = styled.div`
 `
 export const CommentInfo = styled.div`
     display: flex;
-    // margin:10px 5px 0;
+    margin-top: 2px;
+    margin-bottom: 10px;
     align-items:start;
     justify-content:start;
 `
 
 export const VerticalBox = styled.div`
     display: flex;
-    // margin:10px 5px 0;
+    margin-top: 5px;
     align-items:center;
 `
 
@@ -49,16 +50,11 @@ export const LavelText = styled.p`
     align-items:center
 `
 export const Contents = styled.p`
-    margin-top:5px;
-    margin-bottom:5px;
-    font-size: 14px;
+    margin-right:5px;
+    font-size: 16px;
     font-weight: 300;
+    color:#222
 `
-
-export const Icon = styled.div`
-    height: 10px;
-    margin: 0 5px 0 5px
-    `
 
 
 
@@ -67,7 +63,6 @@ export const Icon = styled.div`
 export const WriteContainer = styled.div`
   display:flex;
   flex-direction:column;
-  // max-height:180px;
   max-width:100%;
 `
 
@@ -100,8 +95,7 @@ export const ReplyWrap = styled.div`
     // margin-left: 20px;
 `
 export const Replaycontainer= styled.div`
-  background:rgba(0,0,0,0.05);
+  background:rgba(0,0,0,0.03);
   margin-left:10px;
   padding: 25px 10px 10px 30px;
-  border-radius: 6px;
 `
