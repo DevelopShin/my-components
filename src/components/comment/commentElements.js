@@ -8,21 +8,29 @@ export const CommentBy = styled.div`
     margin: 0.5rem 0.2rem 0;
     // margin-left: 20px;
 `
+
 export const Avatar = styled.img`
-    // display: block;
-    // margin: 0 auto;
-    // margin-right:
+
+    margin-right: 10px;
     width:35px;
     height:35px;
-    border-radius:30%;
+    border-radius:15%;
 `
 
 export const CommentContent = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    padding: 10px;
+
 `
-export const Horizontal = styled.div`
+export const CommentInfo = styled.div`
+    display: flex;
+    // margin:10px 5px 0;
+    align-items:start;
+    justify-content:start;
+`
+
+export const VerticalBox = styled.div`
     display: flex;
     // margin:10px 5px 0;
     align-items:center;
@@ -59,7 +67,7 @@ export const Icon = styled.div`
 export const WriteContainer = styled.div`
   display:flex;
   flex-direction:column;
-  max-height:180px;
+  // max-height:180px;
   max-width:100%;
 `
 
@@ -81,4 +89,19 @@ export const TextArea = styled.textarea`
     margin-top: 10px;
     padding: 5px;
     margin-bottom:2px;
+`
+
+
+export const ReplyWrap = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: start;
+    // margin: 1rem auto 0.4rem 40px;
+    // margin-left: 20px;
+`
+export const Replaycontainer= styled.div`
+  background:rgba(0,0,0,0.05);
+  margin-left:10px;
+  padding: 25px 10px 10px 30px;
+  border-radius: 6px;
 `

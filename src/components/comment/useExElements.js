@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.5);
   padding:0;
   justify-content: center;
   width: 100%;
   height: 100%;
-  min-height: 1100px;
+  // margin: 0 auto;
+  min-height: 1350px;
+  overflow:hidden
 `
 
 export const CommentBoard = styled.div`
